@@ -1,0 +1,16 @@
+.features {
+  color: $color-dark;
+  padding: 120px 0;
+}
+
+@include vp-1023 {
+  .features {
+    padding: 80px 50px 75px;
+  }
+}
+
+@include vp-767 {
+  .features {
+    padding: 50px 25px;
+  }
+}

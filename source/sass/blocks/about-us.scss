@@ -1,0 +1,111 @@
+.about-us {
+  padding: 3px 0 120px 250px;
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: "2022";
+    font-family: $font-Roboto;
+    font-weight: 700;
+    font-size: 156.25px;
+    line-height: 219.72px;
+    position: absolute;
+    left: -68px;
+    top: 57px;
+    transform: rotate(-90deg);
+
+    background: url("../img/about-2022.jpg");
+    background-clip: text;
+    color: transparent;
+
+    @include retina {
+      background-image: url("../img/about-2022@2x.jpg");
+    }
+  }
+}
+
+.about-us h2 {
+  margin: 0 0 15px;
+  font-size: 36px;
+  line-height: 50.63px;
+  font-family: $font-Roboto;
+  font-weight: 400;
+}
+
+.about-us p {
+  font-size: 16px;
+  line-height: 21.5px;
+  margin: 0 0 21px;
+}
+
+.about-us__description--hidden {
+  display: none;
+}
+
+.about-us__button {
+  padding: 14px 13px 8px 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $font-Roboto;
+  width: 155px;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16.41px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  box-sizing: content-box;
+}
+
+@include vp-1023 {
+  .about-us {
+    padding: 0 50px 80px 225px;
+
+    &::before {
+      left: -21px;
+    }
+  }
+
+  .about-us h2 {
+    margin-bottom: 13px;
+  }
+
+  .about-us__button {
+    margin-top: 0;
+  }
+}
+
+@include vp-767 {
+  .about-us {
+    padding: 0 25px 80px;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .about-us h2 {
+    font-size: 28px;
+    line-height: 39.4px;
+    margin-bottom: 9px;
+  }
+
+  .about-us p {
+    font-size: 14px;
+    line-height: 19px;
+
+    &:not(:first-of-type) {
+      margin: 21px 0 0;
+    }
+  }
+
+  .about-us__text--mobile-hidden {
+    display: none;
+  }
+
+  .about-us__button {
+    padding: 8px 15px 12px;
+    width: 130px;
+    margin-top: 10px;
+  }
+}

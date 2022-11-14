@@ -1,0 +1,38 @@
+.control {
+  padding-left: 26px;
+  position: relative;
+}
+
+.control__label {
+  opacity: 0.8;
+  font-size: 14px;
+  line-height: 15.68px;
+}
+
+.control__mark {
+  opacity: 0.8;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  cursor: pointer;
+
+  @include hover-focus {
+    opacity: 1;
+  }
+}
+
+.control__input {
+  &:checked + .control__mark {
+    background: url("../img/svg/checkbox.svg") no-repeat 2px 2px;
+  }
+
+  @include focus {
+    .control__mark {
+      opacity: 1;
+    }
+  }
+}

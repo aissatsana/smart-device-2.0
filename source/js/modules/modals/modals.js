@@ -151,6 +151,7 @@ export class Modals {
 
     this._setSettings(modalName);
     modal.classList.add('is-active');
+    modal.querySelector('input').focus();
 
     if (!this._openedModalElement) {
       this._scrollLock.disableScrolling();

@@ -1,0 +1,228 @@
+.services {
+  font-family: $font-Roboto;
+  color: $color-white;
+  background-color: $color-dark;
+  padding: 70px 50px 140px;
+}
+
+.services__container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.services__title {
+  margin: 0 0 50px;
+  font-size: 36px;
+  line-height: 50.63px;
+  font-weight: 400;
+
+  &--mobile {
+    display: none;
+  }
+}
+
+.services__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.services__item {
+  width: 28.6%;
+  background-image: linear-gradient(
+    to top,
+    rgba($color-dark, 0.5),
+    rgba($color-dark, 0.5));
+  background-size: cover;
+
+  &--production {
+    background-image: url("../img/services-bg-production-desktop.png");
+
+    @include retina {
+      @media (min-width: $vp-1024) {
+        background-image: url("../img/services-bg-production-desktop@2x.png");
+      }
+    }
+  }
+
+  &--mounting {
+    background-image: url("../img/services-bg-mounting-desktop.png");
+
+    @include retina {
+      @media (min-width: $vp-1024) {
+        background-image: url("../img/services-bg-mounting-desktop@2x.png");
+      }
+    }
+  }
+
+  &--lighting {
+    background-image: url("../img/services-bg-lighting-desktop.png");
+
+    @include retina {
+      @media (min-width: $vp-1024) {
+        background-image: url("../img/services-bg-lighting-desktop@2x.png");
+      }
+    }
+  }
+}
+
+.services__link {
+  position: relative;
+  display: block;
+  padding: 50px 80px 0 40px;
+  height: 650px;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
+
+.services__subtitle {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $color-white;
+  width: 160px;
+
+  br {
+    display: none;
+  }
+}
+
+.services__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: $color-blue;
+}
+
+.services__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+@include vp-1023 {
+  .services {
+    padding: 60px 50px 75px;
+  }
+
+  .services__list {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .services__item {
+    width: 100%;
+
+    &--production {
+      background-image: url("../img/services-bg-production-tablet.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-production-tablet@2x.png");
+      }
+    }
+
+    &--mounting {
+      background-image: url("../img/services-bg-mounting-tablet.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-mounting-tablet@2x.png");
+      }
+    }
+
+    &--lighting {
+      background-image: url("../img/services-bg-lighting-tablet.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-lighting-tablet@2x.png");
+      }
+    }
+  }
+
+  .services__title {
+    margin-bottom: 35px;
+  }
+
+  .services__link {
+    width: 100%;
+    height: 250px;
+    padding: 40px 45px;
+  }
+
+  .services__subtitle {
+    width: 230px;
+
+    br {
+      display: block;
+    }
+  }
+}
+
+@include vp-767 {
+  .services {
+    padding: 46px 25px 86px;
+  }
+
+  .services__item {
+    &--production {
+      background-image: url("../img/services-bg-production-mobile.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-production-mobile@2x.png");
+      }
+    }
+
+    &--mounting {
+      background-image: url("../img/services-bg-mounting-mobile.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-mounting-mobile@2x.png");
+      }
+    }
+
+    &--lighting {
+      background-image: url("../img/services-bg-lighting-mobile.png");
+
+      @include retina {
+        background-image: url("../img/services-bg-lighting-mobile@2x.png");
+      }
+    }
+  }
+
+  .services__title {
+    display: none;
+
+    &--mobile {
+      display: block;
+      font-size: 28px;
+      line-height: 39.38px;
+      margin-bottom: 27px;
+    }
+  }
+
+  .services__link {
+    padding: 25px 30px 30px;
+  }
+
+  .services__subtitle {
+    font-size: 18px;
+    line-height: 30px;
+    width: 150px;
+  }
+
+  .services__button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+}

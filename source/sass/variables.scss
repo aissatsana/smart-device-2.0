@@ -1,5 +1,10 @@
 // Colors
-// ---------------------------------
+$color-white: #f2f5f6;
+$color-blue: #00b2ff;
+$color-dark: #041827;
+$color-white-accent: #f8fdff;
+$color-bg-promo: #192024;
+$color-bg-features: #ebebeb;
 
 // Default
 
@@ -18,7 +23,8 @@ $color-torch-red:                   #ff1553;
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography
-// ---------------------------------
+$font-PT-Mono: "PT Mono", "Arial", sans-serif;
+$font-Roboto: "Roboto Condensed", "Arial", sans-serif;
 
 // переменная используемая в html для подключения скейлинга
 $fz-default:                        16px;

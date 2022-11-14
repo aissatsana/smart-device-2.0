@@ -1,0 +1,141 @@
+.features-list {
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.features-list__item {
+  border: 1px solid $color-bg-features;
+  border-left: 5px solid $color-blue;
+  padding: 44px 45px 35px 42px;
+  min-height: 300px;
+
+  &:hover {
+    background-color: $color-blue;
+    color: $color-white;
+
+    h3 {
+      color: $color-white;
+    }
+
+    .features-list__icon {
+      fill: $color-white;
+    }
+  }
+}
+
+.features-list__icon {
+  fill: $color-blue;
+  margin-bottom: 13px;
+}
+
+.features-list__item h3 {
+  font-size: 24px;
+  line-height: 33.6px;
+  color: $color-blue;
+  font-family: $font-Roboto;
+  font-weight: 400;
+  margin: 0 0 15px;
+}
+
+.features-list__item p {
+  font-size: 16px;
+  line-height: 21.6px;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+@include vp-1023 {
+  .features-list__item {
+    padding: 40px 30px 32px 41px;
+    min-height: 360px;
+  }
+
+  .features-list__icon {
+    margin-bottom: 10px;
+  }
+
+  .features-list__item h3 {
+    margin-bottom: 9px;
+  }
+
+  .features-list__item--confidentiality {
+    padding-top: 36px;
+
+    h3 {
+      margin-bottom: 6px;
+    }
+  }
+
+  .features-list__item--price {
+    padding-top: 37px;
+
+    .features-list__icon {
+      margin-bottom: 7px;
+    }
+
+    h3 {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+@include vp-767 {
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .features-list__item {
+    padding: 28px 26px 35px;
+    min-height: 0;
+  }
+
+  .features-list__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .features-list__item h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 13px;
+  }
+
+  .features-list__item p {
+    font-size: 14px;
+    line-height: 18.9px;
+    min-height: 140px;
+  }
+
+  .features-list__item--time {
+    p {
+      min-height: 190px;
+    }
+  }
+
+  .features-list__item--hired {
+    h3 {
+      margin-bottom: 7px;
+    }
+
+    p {
+      min-height: 190px;
+    }
+  }
+
+  .features-list__item--confidentiality {
+    .features-list__icon {
+      margin-bottom: 14px;
+    }
+  }
+
+  .features-list__item--price {
+    .features-list__icon {
+      margin-bottom: 14px;
+    }
+  }
+}

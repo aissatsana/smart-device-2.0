@@ -28,92 +28,109 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
 
-  &__wrapper {
-    position: relative;
+.modal__wrapper {
+  position: relative;
 
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 60px 40px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 60px 40px;
 
-    @include vp-767 {
-      padding: 60px 16px;
-    }
+  @include vp-767 {
+    padding: 60px 16px;
   }
+}
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
 
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+
+  width: 500px;
+  padding: 40px;
+
+  background-color: $color-blue;
+  color: $color-default-white;
+
+  @include vp-767 {
     width: 100%;
-    height: 100%;
-
-    cursor: pointer;
+    padding: 20px;
   }
+}
 
-  &__content {
-    position: relative;
+.modal__title {
+  font-family: $font-Roboto;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42.19px;
+  margin: 0 0 15px;
+}
 
-    width: 600px;
-    padding: 40px;
+.modal__description {
+  margin: 0 0 40px;
+}
 
-    background-color: $color-default-white;
+.modal__close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  background: $color-transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    fill: $color-default-white;
+  }
+}
+
+.modal--responsive {
+  .modal__content {
+    width: 100%;
+  }
+}
+
+.modal--fit-content {
+  .modal__content {
+    width: auto;
 
     @include vp-767 {
       width: 100%;
-      padding: 20px;
     }
   }
+}
 
-  &__close-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    z-index: 1;
+.modal--no-scale {
+  transform: none;
+}
 
-    width: 40px;
-    height: 40px;
-    padding: 0;
+.modal--preload {
+  transition: none;
+}
 
-    background: $color-transparent;
-    border: none;
-    cursor: pointer;
-  }
+.modal.is-active {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
 
-  &--responsive {
-    .modal__content {
-      width: 100%;
-    }
-  }
-
-  &--fit-content {
-    .modal__content {
-      width: auto;
-
-      @include vp-767 {
-        width: 100%;
-      }
-    }
-  }
-
-  &--no-scale {
-    transform: none;
-  }
-
-  &--preload {
-    transition: none;
-  }
-
-  &.is-active {
-    transform: scale(1);
-    visibility: visible;
-    opacity: 1;
-
-    pointer-events: auto;
-  }
+  pointer-events: auto;
 }

@@ -1,0 +1,96 @@
+.feedback {
+  color: $color-default-white;
+  background: $color-blue;
+  position: relative;
+  padding: 0 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    max-width: 1265px;
+    height: 950px;
+    top: -76px;
+    left: 0;
+    background: url("../img/feedback-bg-triangle.svg") no-repeat;
+  }
+}
+
+.feedback__container {
+  max-width: 585px;
+  padding: 170px 0 250px 627px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 510px;
+    height: 285px;
+    position: absolute;
+    left: 0;
+    top: 246px;
+    background: url("../img/svg/airplane.svg");
+  }
+}
+
+.feedback__container h3 {
+  font-family: $font-Roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50.63px;
+  margin: 0 0 11px -5px;
+}
+
+.feedback__container p {
+  font-size: 16px;
+  line-height: 21.5px;
+  margin: 0 0 35px;
+}
+
+@include vp-1023 {
+  .feedback {
+    background: $color-blue;
+    padding: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .feedback__container {
+    padding: 45px 50px 123px;
+    max-width: none;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .feedback__container h3 {
+    margin-bottom: 8px;
+    margin-left: 0;
+  }
+
+  .feedback__container p {
+    margin-bottom: 26px;
+  }
+}
+
+@include vp-767 {
+  .feedback__container {
+    padding: 48px 25px 90px;
+  }
+
+  .feedback__container h3 {
+    font-size: 30px;
+    line-height: 42.19px;
+    margin-bottom: 7px;
+  }
+
+  .feedback__container p {
+    font-size: 14px;
+    line-height: 18.82px;
+    margin-bottom: 34px;
+  }
+}

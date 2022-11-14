@@ -1,0 +1,35 @@
+.nav-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 220px 220px;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  grid-auto-flow: column;
+  gap: 5px 30px;
+}
+
+.nav-list__item {
+  max-width: 220px;
+
+  &:last-child {
+    margin-bottom: 23px;
+  }
+}
+
+.nav-list__link {
+  color: rgba($color-default-white, 0.7);
+  font-size: 16px;
+  line-height: 22px;
+
+  @include hover-focus {
+    color: $color-default-white;
+  }
+}
+
+@include vp-1023 {
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
