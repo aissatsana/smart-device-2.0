@@ -46,3 +46,9 @@
     }
   }
 }
+
+@include vp-767 {
+  .control {
+    min-height: 30px;
+  }
+}
