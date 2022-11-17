@@ -6,6 +6,7 @@
   &--modal {
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
 }
 
@@ -55,6 +56,18 @@
   letter-spacing: 1px;
   line-height: 18.75px;
   width: 95%;
+}
+
+.form__field--modal {
+  margin-top: 20px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  textarea {
+    margin-bottom: 0;
+  }
 }
 
 @include vp-1023 {

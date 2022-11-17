@@ -1,6 +1,11 @@
 .control {
   padding-left: 26px;
   position: relative;
+  white-space: pre-wrap;
+
+  &--modal {
+    padding-left: 36px;
+  }
 }
 
 .control__label {
@@ -22,6 +27,11 @@
 
   @include hover-focus {
     opacity: 1;
+  }
+
+  &--modal {
+    top: 0;
+    left: 10px;
   }
 }
 

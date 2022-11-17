@@ -681,10 +681,10 @@ button,
 
 .modal {
   position: fixed;
-  top: 0;
+  top: 83px;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: -18px;
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -713,6 +713,11 @@ button,
 
 .modal::-webkit-scrollbar {
   display: none;
+}
+
+.modal .btn {
+  width: 100%;
+  margin-top: 23px;
 }
 
 .modal__wrapper {
@@ -755,7 +760,7 @@ button,
   font-weight: 400;
   font-size: 30px;
   line-height: 42.19px;
-  margin: 0 0 15px;
+  margin: 0 0 2px;
 }
 
 .modal__description {
@@ -1369,6 +1374,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  gap: 0;
 }
 
 .form__field {
@@ -1451,9 +1457,26 @@ button,
   width: 95%;
 }
 
+.form__field--modal {
+  margin-top: 20px;
+}
+
+.form__field--modal:first-of-type {
+  margin-top: 0;
+}
+
+.form__field--modal textarea {
+  margin-bottom: 0;
+}
+
 .control {
   padding-left: 26px;
   position: relative;
+  white-space: pre-wrap;
+}
+
+.control--modal {
+  padding-left: 36px;
 }
 
 .control__label {
@@ -1476,6 +1499,11 @@ button,
 
 .control__mark.focus-visible:focus {
   opacity: 1;
+}
+
+.control__mark--modal {
+  top: 0;
+  left: 10px;
 }
 
 .control__input:checked + .control__mark {
