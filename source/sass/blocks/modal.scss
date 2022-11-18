@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  top: 83px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: -18px;
@@ -67,6 +67,7 @@
 
   width: 500px;
   padding: 40px;
+  margin-top: 80px;
 
   background-color: $color-blue;
   color: $color-default-white;
