@@ -847,7 +847,7 @@ button,
   margin-right: 20px;
 }
 
-.hedaer__logo-img {
+.header__logo-img {
   width: 215px;
   height: 55px;
 }
@@ -1874,6 +1874,11 @@ button,
 
   .header__icon {
     top: 1px;
+  }
+
+  .header__logo-img {
+    width: 35px;
+    height: 35px;
   }
 
   .footer__container {
